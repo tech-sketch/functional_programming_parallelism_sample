@@ -30,7 +30,7 @@ public class App {
     }
 
     List<Item> result = text.stream().parallel()
-      .flatMap(line -> tokenizer.tokenize(line).stream())
+      .flatMap(line -> tokenizer.tokenize(line).stream().parallel())
       .filter(token -> 
         Arrays.asList("名詞", "動詞", "形容詞", "副詞").contains(token.getPartOfSpeech().split(",")[0]))
       .map(token -> (token.isKnown()) ? token.getBaseForm() : token.getSurfaceForm())
