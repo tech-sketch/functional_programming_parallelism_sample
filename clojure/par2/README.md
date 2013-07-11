@@ -1,7 +1,9 @@
-clojure nonpar
-==============
+clojure par2
+============
 
 関数型言語による並列処理のサンプル(Clojure) - clojure.core.reducersによる並列処理
+
+今回の問題領域では、clojure.core.reducersによる並列化で処理時間はほとんど短縮されなかった
 
 利用方法
 --------

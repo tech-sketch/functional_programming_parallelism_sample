@@ -1,7 +1,9 @@
-clojure nonpar
-==============
+clojure par3
+============
 
-関数型言語による並列処理のサンプル(Clojure) - java.util.concurrent.Executorsを用いた並列処理
+関数型言語による並列処理のサンプル(Clojure) - futureを用いた明示的な並列化
+
+入力ファイルをコア数分に分割し、futureを用いて明示的に並列化
 
 利用方法
 --------
