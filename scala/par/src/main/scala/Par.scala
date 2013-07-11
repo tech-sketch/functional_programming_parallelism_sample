@@ -14,7 +14,7 @@ package par.core {
       val text = Source.fromFile(file, enc).getLines.toList
 
       text.par
-          .flatMap(line => tokenizer.tokenize(line).asScala)
+          .flatMap(line => tokenizer.tokenize(line).asScala.par)
           .filter(token => List("名詞", "動詞", "形容詞", "副詞").contains(token.getPartOfSpeech.split(",")(0)))
           .map(token => if (token.isKnown) token.getBaseForm else token.getSurfaceForm)
           .groupBy(s => s)
